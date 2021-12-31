@@ -39,10 +39,10 @@ class FastFeeder {
 
         Properties props = new Properties();
         props.put("bootstrap.servers", brokers);
-        props.put("acks", "1"); // Set acknowledgements for producer requests. all is SLOWWWW
+        props.put("acks", "0"); // Set acknowledgements for producer requests. all is SLOWWWW
         props.put("retries", 0); // If the request fails, the producer can automatically retry
         props.put("batch.size", 16384); // Specify buffer size in config
-        props.put("linger.ms", 1); // Reduce the no of requests less than 0
+        props.put("linger.ms", 500); // Reduce the no of requests less than 0
         props.put("buffer.memory", 33554432); // The buffer.memory controls the total amount of memory available to the
                                               // producer for buffering.
         props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
