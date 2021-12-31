@@ -39,7 +39,7 @@ tasks.named('test') {
 
 // Output to build/libs/shadow.jar
 shadowJar {
-   archiveBaseName.set('shadow')
+   archiveBaseName.set('FeedKafka')
    archiveClassifier.set('')
    archiveVersion.set('')
 }
